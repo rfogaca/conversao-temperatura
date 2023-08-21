@@ -2,7 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ $default-branch ]
+    branches: [ main ]
+
+workflow_dispatch:
     
 jobs:
   CI:
@@ -15,3 +17,9 @@ jobs:
         uses: actions/setup-node@v3.8.1
         with:
           node-version: 20.5.0
+
+      - name: Instalação do Mocha e dos pacotes para teste
+        run:
+          cd src;
+          npm install -g mocha;
+          npm install
