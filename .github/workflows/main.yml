@@ -42,5 +42,5 @@ jobs:
           file: ./src/Dockerfile
           push: true
           tags: |
-            rfogaca/aula-conversao-temperatura:v1
+            rfogaca/aula-conversao-temperatura:${{github.run_number}}
             rfogaca/aula-conversao-temperatura:latest
